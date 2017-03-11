@@ -39,13 +39,13 @@
       ]
     }
   },
-    "WPScanTarget": {
+    "resourceGroupLocation": {
       "type": "string",
       "metadata": {
         "description": "Description will be later"
       }
     },
-    "resourceGroupLocation": {
+    "WPScanTarget": {
       "type": "string",
       "metadata": {
         "description": "Description will be later"
