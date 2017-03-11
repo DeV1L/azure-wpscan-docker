@@ -39,6 +39,30 @@
       ]
     }
   },
+    "WPScanTarget": {
+      "type": "string",
+      "metadata": {
+        "description": "Description will be later"
+      }
+    },
+    "resourceGroupLocation": {
+      "type": "string",
+      "metadata": {
+        "description": "Description will be later"
+      }
+    },
+    "commandToExecute": {
+      "type": "string",
+      "metadata": {
+        "description": "Description will be later"
+      }
+    },
+    "fileUris": {
+      "type": "string",
+      "metadata": {
+        "description": "Description will be later"
+      }
+    },
   "variables": {
     "imagePublisher": "Canonical",
     "imageOffer": "UbuntuServer",
