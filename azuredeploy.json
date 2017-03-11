@@ -187,16 +187,13 @@
       }
     },
         {
-          "name": "customscript",
-          "type": "extensions",
+          "type": "Microsoft.Compute/virtualMachines/extensions",
+		  "name": "customscript",
           "location": "[resourceGroup().location]",
           "apiVersion": "2015-06-15",
-          "dependsOn": [
-            "[concat('Microsoft.Compute/virtualMachines/', concat(parameters('vmName'),copyindex()))]"
-          ],
-          "tags": {
-            "displayName": "customscript"
-          },
+      "dependsOn": [
+        "[concat('Microsoft.Compute/virtualMachines/', variables('vmName'))]"
+      ],
           "properties": {
             "publisher": "Microsoft.Azure.Extensions",
             "type": "CustomScript",
