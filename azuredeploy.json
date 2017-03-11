@@ -185,7 +185,31 @@
         "autoUpgradeMinorVersion": true,
         "settings": { }
       }
-    }
+    },
+        {
+          "name": "customscript",
+          "type": "extensions",
+          "location": "[resourceGroup().location]",
+          "apiVersion": "2015-06-15",
+          "dependsOn": [
+            "[concat('Microsoft.Compute/virtualMachines/', concat(parameters('vmName'),copyindex()))]"
+          ],
+          "tags": {
+            "displayName": "customscript"
+          },
+          "properties": {
+            "publisher": "Microsoft.Azure.Extensions",
+            "type": "CustomScript",
+            "typeHandlerVersion": "2.0",
+            "autoUpgradeMinorVersion": true,
+            "settings": {
+              "fileUris": [
+                "https://github.com/DeV1L/azure-wpscan-docker/raw/master/scripts/wpscan.sh"
+              ],
+              "commandToExecute": "[concat('/bin/bash ./wpscan.sh ', parameters('WPScanTarget'))]"
+            }
+          }
+        }
   ]
 }
 
