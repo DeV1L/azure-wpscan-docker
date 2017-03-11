@@ -39,12 +39,6 @@
       ]
     }
   },
-    "resourceGroupLocation": {
-      "type": "string",
-      "metadata": {
-        "description": "Description will be later"
-      }
-    },
     "WPScanTarget": {
       "type": "string",
       "metadata": {
