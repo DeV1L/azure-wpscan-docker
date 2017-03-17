@@ -4,7 +4,7 @@ LOG_TIME=` date +"%b %e %Y %T"`
 WPSACAN_LOG="/tmp/wpscan_$1.log"
 
 smtpemailfrom="wpscan@arkadium.com"
-mailto=""
+mailto="$2"
 subject="WPScan report for $1"    
 EML="/tmp/wpscan.eml"
 
