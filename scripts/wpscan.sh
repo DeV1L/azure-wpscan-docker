@@ -8,8 +8,8 @@ mailto="$2"
 subject="WPScan report for $1"    
 EML="/tmp/wpscan.eml"
 
-docker run --rm wpscanteam/wpscan ruby wpscan.rb --update
-docker run --rm wpscanteam/wpscan ruby wpscan.rb --url $1 > $WPSACAN_LOG
+sudo docker run --rm wpscanteam/wpscan ruby wpscan.rb --update
+sudo docker run --rm wpscanteam/wpscan ruby wpscan.rb --url $1 > $WPSACAN_LOG
 
 echo "From: \"WPScan\"<$smtpemailfrom>" > $EML
 echo "To: $mailto" >> $EML
